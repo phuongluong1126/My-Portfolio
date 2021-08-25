@@ -1,0 +1,162 @@
+.avatar {
+  margin-left: 12rem;
+  padding: 0;
+}
+
+.avatar img{
+  width: 320px;
+  background-color: var(--white-alpha-25);
+  border: 8px solid var(--white-alpha-25);
+  position: relative;
+  margin-top: -2rem;
+}
+
+.avatar::before {
+  content: "";
+  position: absolute;
+  left: 8rem;
+  top: 20px;
+  margin: auto;
+  height: 350px;
+  width: 300px;
+  background-color: var(--color-main-1);
+  z-index: -1;
+}
+
+.about--page .right--container {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  padding: 0;
+  padding-right: 3rem;
+  width: 45%;
+}
+
+.about--page .left--container {
+padding-left: 5rem;
+padding-right: 1rem;
+margin-right: 0;
+}
+.logo--about {
+  width: 350px;
+}
+.education--section {
+  margin: 0.5rem 0;
+}
+.edu--icon {
+  color: var(--color-main-1);
+  font-size: 1.5rem;
+  display: inline;
+}
+.edu--icon h3 {
+  font-family: "Montserrat-Regular";
+  font-size: 1.15rem;
+  display: inline;
+  padding: 0 0.5rem;
+}
+
+.sub--text {
+  margin-top: 0.1rem;
+  color: var(--color-text-1);
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  color: var(--color-text-1);
+}
+
+.skill--item {
+  background-color: var(--white-alpha-25);
+  padding: 5px 10px;
+  margin: 1px 10px 5px 0px;
+  border: 2px solid var(--white-alpha-25);
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* .hero--section{
+    align-items: flex-start;
+} */
+
+.text--name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-main-1);
+}
+.section--3 {
+  margin-top: 1rem;
+  margin-bottom: 0.1rem;
+}
+
+@media (max-width: 1024px) {
+  .about--page {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 2rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    flex-direction: column-reverse;
+  }
+  .about--page .right--container {
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+    position: none;
+  }
+  .about--page .left--container {
+    margin: 0 2rem;
+    padding: 0;
+  }
+  .avatar {
+    margin-left: 0;
+    margin: 2rem auto;
+    padding: 0;
+    display: flex;
+  }
+  
+  .avatar img{
+    width: 320px;
+    background-color: var(--white-alpha-25);
+    border: 8px solid var(--white-alpha-25);
+    position: relative;
+    margin: 2rem auto;
+  }
+  
+  .avatar::before {
+    margin: -1rem auto;
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about--page {
+    padding: 1rem;
+  }
+
+  .about--page .right--container {
+    justify-content: center;
+    padding: 0;
+    margin: 1rem auto;
+    position: none;
+  }
+  .about--page .left--container {
+    margin: auto;
+    padding: 0;
+margin-bottom: 2rem;
+  }
+.avatar img{
+  width: 280px;
+  margin: 0 auto;
+}
+  .avatar::before {
+display: none;
+  }
+  .edu--icon h3 {
+    font-family: "Montserrat-Regular";
+    font-size: 1.15rem;
+    display: inline;
+    padding: 0 0.5rem;
+  }
+}

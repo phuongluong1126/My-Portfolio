@@ -1,0 +1,246 @@
+/* Global style */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: "Montserrat-Regular";
+  --color-main-1: #eb3b5a;
+  --color-main-2: #3867d6;
+  --color-main-3: #f5cc14;
+  --color-text-2: #4b6584;
+  --color-text-1: #123d4d;
+  --color-pastel-1: #ffcaca;
+  --color-pastel-2: #9fffd2;
+  --color-pastel-3: #eff899;
+  --white: #ffffff;
+  --white-alpha-40: rgba(255, 255, 255, 0.4);
+  --white-alpha-25: rgba(255, 255, 255, 0.25);
+  --backdrop-filter-blur: blur(5px);
+}
+
+::-webkit-items-center {
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-main-1);
+}
+
+.page {
+  background-color: var(--white-alpha-25);
+  border-left: 2px solid var(--white-alpha-25);
+  border-right: 2px solid var(--white-alpha-25);
+  height: 84.5vh;
+  max-width: 1300px;
+  /* border-radius: 30px; */
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url(./fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url(./fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url(./fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url(./fonts/Montserrat-Bold.ttf);
+}
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-pastel-1),
+    var(--color-pastel-2),
+    var(--color-pastel-3)
+  );
+  backdrop-filter: var(--backdrop-filter-blur);
+}
+
+.hero--section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* height: 90vh; */
+}
+
+.left--container {
+  text-align: left;
+  width: 50%;
+    padding-right: 5%;
+  /* backdrop-filter: var(--backdrop-filter-blur); */
+}
+
+.right--container {
+  width: 50%;
+  padding-left: 10%;
+
+}
+
+.small--text {
+  font-size: 2rem;
+  color: var(--color-text-1);
+}
+
+.medium--text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-main-1);
+}
+
+.large--text {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-text-1);
+}
+
+.discription--text {
+  font-size: 1.1rem;
+  color: var(--color-text-1);
+  line-height: 1.6rem;
+  padding: 0.2rem 0;
+}
+
+.discription--text span {
+  font-family: "Montserrat-Medium";
+}
+.heading {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 2rem;
+}
+
+.heading--gap {
+  height: 5rem;
+}
+
+.stroke--text {
+  -webkit-text-stroke: 1px var(--color-main-1);
+  -webkit-text-fill-color: transparent;
+  font-family: "Montserrat-Medium";
+  font-size: 2.9rem;
+  display: inline-block;
+  width: 432px;
+  text-align: center;
+  /* background-color: red; */
+}
+
+.stroke--text2 {
+  -webkit-text-stroke: 0.2px var(--color-main-1);
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes carousel {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes zoomInOut {
+  0%,
+  100% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.carousel--text {
+  position: relative;
+  animation: carousel 20s linear infinite;
+  overflow: hidden;
+  width: 200%;
+  height: 50px;
+  /* background-color: blue; */
+  transform: translate(0, -50%);
+}
+
+.page--loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-pastel-1),
+    var(--color-pastel-2)
+  );
+  backdrop-filter: var(--backdrop-filter-blur);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease;
+}
+
+.page--loader .fade-out {
+  opacity: 0;
+}
+.page--loader div {
+  border: 2px solid transparent;
+  position: absolute;
+  animation: zoomInOut 1s linear infinite;
+}
+.page--loader div:nth-child(1) {
+  height: 60px;
+  width: 60px;
+  background-color: var(--color-pastel-1);
+}
+
+.page--loader div:nth-child(2) {
+  height: 50px;
+  width: 50px;
+  background-color: var(--white-alpha-25);
+}
+
+.page--loader div:nth-child(3) {
+  height: 40px;
+  width: 40px;
+  background-color: var(--color-pastel-1);
+}
+
+.toggle{
+  cursor: pointer;
+  position: fixed;
+top: 50px;
+left: 10%;
+}
+
+/* responsive */
+@media (max-width: 1327px) {
+  .page {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .left--container, .right--container {
+    width: 100%;
+  }
+}
