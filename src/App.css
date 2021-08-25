@@ -11,9 +11,12 @@
   --color-main-3: #f5cc14;
   --color-text-2: #4b6584;
   --color-text-1: #123d4d;
-  --color-pastel-1: #ffcaca;
-  --color-pastel-2: #9fffd2;
-  --color-pastel-3: #eff899;
+  --color-pastel-3: #6cd4ee;
+  --color-pastel-2: #f9facc;
+  --color-pastel-1: #a7e3fd;
+  --color-deco-3: #c2fff2;
+  --color-deco-1: #d2f1f5;
+  --color-deco-2: #fdfff2;
   --white: #ffffff;
   --white-alpha-40: rgba(255, 255, 255, 0.4);
   --white-alpha-25: rgba(255, 255, 255, 0.25);
@@ -190,7 +193,8 @@ body {
   background-image: linear-gradient(
     to bottom right,
     var(--color-pastel-1),
-    var(--color-pastel-2)
+    var(--color-pastel-2),
+    var(--color-pastel-3)
   );
   backdrop-filter: var(--backdrop-filter-blur);
   display: flex;
@@ -210,7 +214,7 @@ body {
 .page--loader div:nth-child(1) {
   height: 60px;
   width: 60px;
-  background-color: var(--color-pastel-1);
+  background-color: #c5f8ff;
 }
 
 .page--loader div:nth-child(2) {
@@ -222,7 +226,7 @@ body {
 .page--loader div:nth-child(3) {
   height: 40px;
   width: 40px;
-  background-color: var(--color-pastel-1);
+  background-color:  #b9f7ff;
 }
 
 .toggle{

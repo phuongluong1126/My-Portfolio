@@ -25,10 +25,10 @@
     display: none;
     content: '';
     position: absolute;
-    left: 45%;
-    bottom: 20%;
-    height: 10%;
-    width: 10%;
+    left: 13%;
+    bottom: 30%;
+    height: 3%;
+    width: 74%;
     background-color: var(--color-main-1);
     text-align: center;
     transition: color 0.3s ease;
@@ -40,7 +40,7 @@
 
 
 
-.navbar .navbar--active::after{
+/* .navbar .navbar--active::after{
     content: '';
     position: absolute;
     left: 45%;
@@ -50,7 +50,7 @@
     background-color: var(--color-main-1);
     text-align: center;
     display: block;
-}
+} */
 
 @media (max-width: 768px) {
     .logo {

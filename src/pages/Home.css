@@ -51,7 +51,7 @@
   bottom: -5%;
   height: 110%;
   width: 110%;
-  background-color: var(--color-pastel-1);
+  background-color: var(--color-deco-2);
   /* border-radius: 50%; */
   z-index: -1;
   transition: width 0.3s ease;
@@ -59,11 +59,11 @@
 }
 
 .decor-2::after {
-  background-color: var(--color-pastel-2);
+  background-color: var(--color-deco-3);
 }
 
 .decor-3::after {
-  background-color: var(--color-pastel-3);
+  background-color: var(--color-deco-1);
 }
 
 .decor-1 {
