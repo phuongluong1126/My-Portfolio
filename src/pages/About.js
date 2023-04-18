@@ -1,19 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import profileAva from "../images/ava.jpg";
-import { ReactComponent as Logo } from "../images/logo.svg";
 import { Button } from "../components/Button";
+import { BallTriangle  } from "react-loader-spinner";
+
 import "./About.css";
 // import { jsPDF } from "jspdf";
 
 export default function About() {
+    const [isLoading, setIsLoading] = useState(true);
+
+  const handleImageLoaded = () => {
+    setIsLoading(false);
+  };
+
   return (
     <div className="page about--page">
       {/* <div className="heading medium--text">About Me</div> */}
       <div className="heading--gap"></div>
       <div className="hero--section">
-      <div className="right--container">
+        <div className="right--container">
           <div className="avatar">
-            <img src={profileAva} alt="ava-img" />
+                 {isLoading && (
+          <BallTriangle 
+            type="ThreeDots"
+            color="#EB3B5A"
+            height={50}
+            width={50}
+            className="image--loader"
+          />
+        )}
+            <img src={profileAva} alt="ava-img"  style={{ display: isLoading ? "none" : "block" }} onLoad={handleImageLoaded} />
           </div>
         </div>
         <div className="left--container">
@@ -22,18 +38,14 @@ export default function About() {
           <div className="education--section">
             <div className="edu--icon">
               <i class="fas fa-graduation-cap"></i>
-              <h3>Education</h3>
+              <h3>General</h3>
             </div>
             <div className="discription--text">
-              I am a student of <span>Software Engineering</span> at 
-              <br></br>
-            the University of Information Technology Vietnam
-            National University Ho Chi Minh (VNU - HCM)
+              I am a <span>Full Stack Software Engineer</span> with nearly 2
+              years of experience in Web Development.
               <div className="discription--text sub--text">
-                <span>Graduate in: </span>February 2022
-              </div>
-              <div className="discription--text sub--text">
-                <span>GPA: </span>7.9/10
+                <span>Good Graduation</span> from the University of Information
+                Technology Vietnam National University Ho Chi Minh.
               </div>
             </div>
           </div>
@@ -43,28 +55,31 @@ export default function About() {
               <h3>Specialist Skills</h3>
             </div>
             <div className="skills">
+              <div className="skill--item">JavaScript</div>
+              <div className="skill--item">TypeScript</div>
               <div className="skill--item">HTML</div>
               <div className="skill--item">CSS</div>
-              <div className="skill--item">JAVA SCRIPT</div>
-              <div className="skill--item">DART</div>
-              <div className="skill--item">REACTJS</div>
-              <div className="skill--item">NODEJS</div>
-              <div className="skill--item">FLUTTER</div>
-              <div className="skill--item">MONGODB</div>
-              {/* <div className="skill--item">EXPRESS</div> */}
+              <div className="skill--item">ReactJS</div>
+              <div className="skill--item">NextJS</div>
+              <div className="skill--item">NestJS</div>
+              <div className="skill--item">ExpressJS</div>
+              <div className="skill--item">AWS</div>
+              <div className="skill--item">Postgres</div>
+              <div className="skill--item">ORM </div>
             </div>
           </div>
 
           <div className="education--section section--3">
             <div className="edu--icon">
-            <i class="fas fa-hand-point-right"></i>
+              <i class="fas fa-hand-point-right"></i>
               <h3>Explore more</h3>
             </div>
           </div>
           {/* <Tabs /> */}
           <a
-            href="https://drive.google.com/file/d/1hMkCw8A8geOpzXLfdro6aipoPep2cpPT/view?usp=sharing"
+            href="https://drive.google.com/file/d/1B0TTm0suyZfqhOIWcOycPSFVU7LlbjUt/view?usp=sharing"
             target="_blank"
+            rel="noreferrer"
           >
             <Button>Download My CV</Button>
           </a>

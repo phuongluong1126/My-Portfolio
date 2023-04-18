@@ -33,6 +33,13 @@ export default function Home() {
             <Link to="/projects" className="fast--action">
               <Button className="btn--action">Projects</Button>
             </Link>
+             <a 
+            href="https://drive.google.com/file/d/1B0TTm0suyZfqhOIWcOycPSFVU7LlbjUt/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button className="btn--action">My CV</Button>
+          </a>
           </div>
           {/* <div className="large--text">A Developer</div> */}
           {/* <div className="action--container">

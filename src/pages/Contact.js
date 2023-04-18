@@ -40,7 +40,7 @@ export default function Contact() {
           </div>
           <div className="contact--item">
             <h3>Location:</h3>
-            <p>Thu Duc, Ho Chi Minh City</p>
+            <p>District 3, Ho Chi Minh City</p>
           </div>
           <div className="contact--item">
             <h3>Email:</h3>
@@ -55,17 +55,17 @@ export default function Contact() {
             <div className="social--links">
               <a
                 href="https://www.facebook.com/phuongluong1126"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 <i class="fab fa-facebook-f"></i>
               </a>
               <a
                 href="https://www.linkedin.com/in/phuongluong1126/"
-                target="_blank"
+                target="_blank" rel="noreferrer"
               >
                 <i class="fab fa-linkedin-in"></i>
               </a>
-              <a href="https://github.com/phuongluong1126" target="_blank">
+              <a href="https://github.com/phuongluong1126" target="_blank" rel="noreferrer">
                 <i class="fab fa-github"></i>
               </a>
             </div>

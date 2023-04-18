@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import ProjectItem from "../components/ProjectItem";
 import "./Projects.css";
-import project1 from "../images/projects/01.png";
 import video1 from "../videos/01.mp4";
 import video2 from "../videos/02.mp4";
 import video3 from "../videos/03.mp4";
@@ -17,6 +15,7 @@ import img5 from "../images/projects/05.png";
 import img6 from "../images/projects/06.png";
 
 export default function Projects() {
+
   return (
     <div className="page projects--page">
       <div className="left--container">

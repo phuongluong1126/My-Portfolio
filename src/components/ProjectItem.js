@@ -1,16 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProjectItem.css";
-import { Link } from "react-router-dom";
 import HoverVideoPlayer from 'react-hover-video-player';
+import { BallTriangle } from "react-loader-spinner";
+
 export default function ProjectItem(props) {
+        const [isLoading, setIsLoading] = useState(true);
+
+  const handleImageLoaded = () => {
+    setIsLoading(false);
+  };
   return (
     <div>
       <div className="project--item">
         {/* <Link className="project--item--link" to={`/projects/${props.id}`}>
         </Link> */}
+                            {isLoading && (
+          <BallTriangle 
+            type="ThreeDots"
+            color="#EB3B5A"
+            height={50}
+            width={50}
+            className="image--loader"
+          />
+        )}
         <HoverVideoPlayer
           videoSrc={props.urlVideo}
+           onLoad={handleImageLoaded}
           pausedOverlay={
+   
             <img className="project--item--img"
               src={props.urlImage}
               alt=""
@@ -18,14 +35,22 @@ export default function ProjectItem(props) {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
+                display: isLoading ? "none" : "block"
               }}
+            onLoad={handleImageLoaded}
             />
           }
-          loadingOverlay={
-            <div className="loading-overlay">
-              <div className="loading-spinner" />
-            </div>
-          }
+           loadingOverlay={
+    isLoading && (
+      <BallTriangle 
+        type="ThreeDots"
+        color="#EB3B5A"
+        height={50}
+        width={50}
+        className="video--loader"
+      />
+    )
+  }
         />
         <div className="project--item--info">
           <h6 className="project--item--name">{props.name}</h6>
@@ -34,7 +59,7 @@ export default function ProjectItem(props) {
             {/* <a href={props.linkDemo} target="_blank" className="project--link--item">
               Demo
             </a> */}
-            <a href={props.linkGithub} target="_blank" className="project--link--item">
+            <a href={props.linkGithub} target="_blank" className="project--link--item" rel="noreferrer">
               Github
             </a>
           </div>
