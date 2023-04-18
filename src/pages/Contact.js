@@ -1,13 +1,10 @@
-import { React, useState } from "react";
+import { React } from "react";
 import { Button } from "../components/Button";
 import "./Contact.css";
 import emailjs from "emailjs-com";
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+
   function sendEmail(e) {
     e.preventDefault();
 
