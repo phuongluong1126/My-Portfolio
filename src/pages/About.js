@@ -77,7 +77,7 @@ export default function About() {
           </div>
           {/* <Tabs /> */}
           <a
-            href="https://drive.google.com/file/d/1B0TTm0suyZfqhOIWcOycPSFVU7LlbjUt/view?usp=sharing"
+            href="https://drive.google.com/file/d/110Okr3CG7w-LJp_deEFS_VFkJC68aqpV/view"
             target="_blank"
             rel="noreferrer"
           >
