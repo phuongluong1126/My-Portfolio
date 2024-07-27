@@ -41,7 +41,7 @@ export default function About() {
               <h3>General</h3>
             </div>
             <div className="discription--text">
-              I am a <span>Full Stack Software Engineer</span> with nearly 2
+              I am a <span>Full Stack Software Engineer</span> with about 3
               years of experience in Web Development.
               <div className="discription--text sub--text">
                 <span>Good Graduation</span> from the University of Information
